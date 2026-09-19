@@ -2,7 +2,7 @@
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101f2c"><meta name="description" content="月满中秋，礼遇此刻。中秋现场幸运转盘。"><title>月满 · 礼至｜中秋礼遇</title><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css"><script src="app.js" defer></script></head>
 <body>
 <div class="ambient" aria-hidden="true"></div>
-<header><button id="brand" class="brand" aria-label="月满礼至，工作人员长按三秒进入管理">月满<span>·</span>礼至 <small>MID-AUTUMN GATHERING</small></button><span class="season">一轮明月，一份心意</span><button id="fullscreen" class="icon-button" aria-label="切换全屏">⛶</button></header>
+<header><button id="brand" class="brand" aria-label="月满礼至，工作人员点击后输入密码进入管理">月满<span>·</span>礼至 <small>MID-AUTUMN GATHERING</small></button><span class="season">一轮明月，一份心意</span><button id="fullscreen" class="icon-button" aria-label="切换全屏">⛶</button></header>
 <main>
 <section id="setup" class="setup">
 <div class="intro"><span class="eyebrow">MID-AUTUMN · A GIFT FOR YOU</span><h1>月满人间<br>好礼相逢<span class="seal">中秋</span></h1><p>把一份美好，留在团圆时刻。</p><div class="intro-line"></div><span class="small-note">现场活动设置 · 仅供工作人员使用</span></div>
@@ -11,7 +11,7 @@
 <div class="row-title"><span>实际中奖项与概率</span><button type="button" id="defaults" class="text-button">恢复默认</button></div><p class="helper">转盘展示全部 20 项礼品，最终仅停在下方 5 项。其余 15 项仅展示，不参与本轮抽取。</p><div id="probabilities"></div><div id="total" class="total" role="status"></div>
 <div class="password-grid"><label class="field">管理员口令<input id="password" type="password" minlength="6" autocomplete="new-password" placeholder="至少 6 位，用于退出活动"></label><label class="field">确认口令<input id="confirm" type="password" autocomplete="new-password" placeholder="再次输入口令"></label></div>
 <label class="field">活动使用说明<textarea id="terms" rows="2" maxlength="600" placeholder="可填写有效期、适用范围及核销方式；请使用甲方确认的规则。"></textarea></label>
-<p id="config-error" class="error" role="alert"></p><button id="launch" class="primary" type="submit">锁定配置，开启礼遇 <span>↗</span></button><p class="helper">刷新后仍停留在活动页。长按左上角「月满 · 礼至」3 秒，输入口令可返回。</p><div id="record-tools" hidden><button id="export" type="button" class="text-button">导出本机抽奖记录</button><span id="record-count"></span></div>
+<p id="config-error" class="error" role="alert"></p><button id="launch" class="primary" type="submit">锁定配置，开启礼遇 <span>↗</span></button><p class="helper">刷新后仍停留在活动页。点击左上角「月满 · 礼至」，输入口令可返回。</p><div id="record-tools" hidden><button id="export" type="button" class="text-button">导出本机抽奖记录</button><span id="record-count"></span></div>
 </form></section>
 <section id="activity" class="activity" hidden><div class="event-copy"><span id="event-organizer" class="eyebrow"></span><h1>月满<span class="dot">·</span>礼至</h1><p class="poem">今夜月色很美<br>好运，也恰好为你而来。</p><div class="edition"><span>中<br>秋</span><div>MID-AUTUMN<br><b>A MOMENT OF GOOD FORTUNE</b></div></div></div>
 <div class="wheel-column"><div class="wheel-stage"><div class="outer-orbit"></div><div class="pointer" aria-hidden="true"></div><svg id="wheel" viewBox="0 0 600 600" role="img" aria-label="中秋奖品转盘"></svg><button id="spin" class="spin-button"><span>启一份</span><strong>好礼</strong><small>轻触抽奖</small></button></div><p id="spin-status" class="wheel-caption" aria-live="polite">月圆时分，让美好发生</p></div>
