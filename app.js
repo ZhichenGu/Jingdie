@@ -42,14 +42,14 @@ function updateTotal(){const weights=values(),sum=Math.round(weights.reduce((a,b
 function setup(){ $('setup').hidden=false;$('activity').hidden=true;$('probabilities').replaceChildren();PRIZES.forEach((p,i)=>{const row=document.createElement('label');row.className='prize-row';row.innerHTML=`<span>${p.name}<small>${p.detail}</small></span><span class="percent-field"><input id="p${i}" type="number" min="0" max="100" step="0.01" required aria-label="${p.name}中奖概率" value="${state.config?.weights[i]??p.weight}">%</span>`;$('probabilities').append(row);$('p'+i).addEventListener('input',updateTotal);});$('organizer').value=state.config?.organizer??'中秋答谢礼';$('terms').value=state.config?.terms??'';$('password').value='';$('confirm').value='';$('password').placeholder=state.config?'留空沿用现有口令':'至少 6 位，用于退出活动';$('confirm').placeholder=state.config?'更换口令时需再次输入':'再次输入口令';$('config-error').textContent=storageOK?'':'浏览器存储不可用，暂时无法开启活动。请启用本地存储后刷新。';$('record-tools').hidden=!state.records.length;$('record-count').textContent=`共 ${state.records.length} 次`;updateTotal();}
 function drawWheel(){
  const ns='http://www.w3.org/2000/svg',svg=$('wheel');svg.replaceChildren();
- const colors=['#efe3c9','#dac6a1'];
+ const colors=['#fbfaf2','#f3efbb'];
  const pt=(r,a)=>[300+r*Math.cos(a*Math.PI/180),300+r*Math.sin(a*Math.PI/180)];
  DISPLAY_PRIZES.forEach((p,i)=>{
   const start=-90-SECTOR_ANGLE/2+i*SECTOR_ANGLE,end=start+SECTOR_ANGLE,a=pt(298,start),b=pt(298,end);
-  const path=document.createElementNS(ns,'path');path.setAttribute('d',`M300 300 L${a} A298 298 0 0 1 ${b} Z`);path.setAttribute('fill',colors[i%2]);path.setAttribute('stroke','#baa073');path.setAttribute('stroke-width','.8');svg.append(path);
+  const path=document.createElementNS(ns,'path');path.setAttribute('d',`M300 300 L${a} A298 298 0 0 1 ${b} Z`);path.setAttribute('fill',colors[i%2]);path.setAttribute('stroke','#7e7c66');path.setAttribute('stroke-width','.8');svg.append(path);
   const g=document.createElementNS(ns,'g');g.setAttribute('transform',`rotate(${i*SECTOR_ANGLE-90} 300 300)`);
   const title=document.createElementNS(ns,'title');title.textContent=p.name;g.append(title);
-  p.lines.forEach((line,j)=>{const t=document.createElementNS(ns,'text');t.setAttribute('x','573');t.setAttribute('y',p.lines.length===1?305:296+j*18);t.setAttribute('text-anchor','end');t.setAttribute('font-size',line.length>17?'13':'15');t.setAttribute('font-family','"PingFang SC", "Microsoft YaHei", sans-serif');t.setAttribute('fill','#293b42');t.textContent=line;g.append(t);});svg.append(g);
+  p.lines.forEach((line,j)=>{const t=document.createElementNS(ns,'text');t.setAttribute('x','573');t.setAttribute('y',p.lines.length===1?305:296+j*18);t.setAttribute('text-anchor','end');t.setAttribute('font-size',line.length>17?'13':'15');t.setAttribute('font-family','"PingFang SC", "Microsoft YaHei", sans-serif');t.setAttribute('fill','#25251f');t.textContent=line;g.append(t);});svg.append(g);
  });
 }
 function activity(){ $('setup').hidden=true;$('activity').hidden=false;$('event-organizer').textContent=state.config.organizer||'中秋答谢礼';drawWheel();$('wheel').getAnimations().forEach(a=>a.cancel());rotation=state.pending?targetAngle(state.pending.index):0;$('wheel').style.transform=`rotate(${rotation}deg)`;$('spin').disabled=Boolean(state.pending);if(state.pending)showResult(state.pending);}

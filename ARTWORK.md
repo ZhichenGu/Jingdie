@@ -1,15 +1,17 @@
-# Background artwork
+# Current artwork — paper and moon
 
-Tool: built-in ImageGen. One generation, no reference image.
-Final asset: festival.jpg.
+Tool: built-in ImageGen. One new generation, no reference image supplied to tool; user references interpreted in the prompt. Final project asset: moon-yellow.webp. CSS applies a soft edge mask to blend the pale image background into the page.
+
+## Prompt
 
 Use case: stylized-concept
-Asset type: original website background, landscape 1536 x 1024
-Primary request: elegant Mid-Autumn moon and a tiny golden osmanthus branch, atmospheric editorial luxury Chinese festival.
-Scene/backdrop: mostly empty midnight ink navy (#101f2c) field.
-Subject: luminous ivory full moon entirely in the upper LEFT quadrant, with subtle natural lunar surface, and one delicate tiny osmanthus branch in muted gold.
-Composition/framing: restrained asymmetrical layout; moon centered around 24% width and 24% height and approximately 20% of canvas width; branch subtly enters from left edge near moon. Rest of image especially center, right, and lower regions stays mostly empty dark navy, suitable for later text and wheel overlays.
-Style/medium: refined photographic editorial art with fine photographic paper texture, understated and luxurious.
-Lighting/mood: soft luminous moon glow against deep navy; serene, poetic festival atmosphere.
-Color palette: midnight ink navy #101f2c, muted gold, luminous ivory.
-Constraints: no lettering, no text, no UI, no wheel, no watermark, no frame. Generate one landscape image.
+Asset type: standalone website illustration, 1024x1024 square.
+Primary request: one softly radiant electric lemon-yellow full moon orb, abstract and dreamy, inspired by minimalist contemporary Chinese editorial Mid-Autumn posters.
+Composition: single centered circular orb occupies 78% of the square width and height, generous equal margins.
+Style: minimal abstract illustration, NOT realistic astronomy. Slight analog/risograph blurred edge, subtle luminous yellow center. Bright yellow #ffeb00 with darker golden-yellow soft depth toward orb edges and an almost-white hairline halo. Understated light paper grain.
+Background: clean very pale neutral paper white #fafaf7; corners and outer background flat and uniform for blending seamlessly into a web page.
+Constraints: no craters, no face, no branches, no stars, no text, no letters, no graphic layout, no watermark. Only one yellow orb on the pale background.
+
+## Type
+
+Noto Serif SC, local open-source subset reused from an existing local font asset, with SIL Open Font License retained in fonts/OFL.txt. Local loading avoids a runtime font CDN dependency. System sans-serif fonts are used for controls and wheel labels; Courier New is used for the short editorial English labels.

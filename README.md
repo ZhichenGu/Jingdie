@@ -27,7 +27,7 @@
 
 ## GitHub 托管
 
-将 index.html、style.css、app.js、festival.jpg、favicon.svg 和 .nojekyll 一起放到目标 GitHub Pages 发布目录。无需构建命令。未自动上传或发布到 GitHub，因为本任务未指定目标仓库。
+将 index.html、style.css、app.js、moon-yellow.webp、favicon.svg 和 fonts 文件夹一起放到目标 GitHub Pages 发布目录。无需构建命令。未自动上传或发布到 GitHub，因为本任务未指定目标仓库。
 
 ## 已完成验证
 
@@ -35,4 +35,4 @@
 
 ## 视觉资产
 
-festival.jpg 是通过内置 ImageGen 工具一次生成的原创月亮与桂花背景，由 PNG 转换为 JPEG。生成提示词见 ARTWORK.md。
+当前视觉为纸白、明黄月亮与细线海报风格，转盘中央使用纸白色横排“开启好礼”按钮。moon-yellow.webp 通过内置 ImageGen 工具生成，转换为 WebP。中文标题使用本地思源宋体 Noto Serif SC 子集，操作文字使用系统黑体；自定义活动名称中未包含的字形使用系统宋体回退。字体许可证位于 fonts/OFL.txt。生成提示词见 ARTWORK.md。旧 festival.jpg 作为历史资源保留，页面不再引用。
