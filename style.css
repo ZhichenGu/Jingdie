@@ -19,3 +19,6 @@ dialog:not([open]){display:none}
 #dialog-backdrop{position:fixed;inset:0;background:#33352e80;z-index:1000}
 dialog.fallback-dialog[open]{display:block;position:fixed;top:50%;left:50%;right:auto;bottom:auto;transform:translate(-50%,-50%);margin:0;z-index:1001;max-height:90vh;overflow-y:auto}
 .moon-art img{-webkit-mask-image:radial-gradient(circle at center,#000 56%,transparent 71%)}
+
+/* Keep the rules link as the only item beneath the activity. */
+.event-bottom{justify-content:flex-end}
